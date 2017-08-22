@@ -1,0 +1,157 @@
+_________________________
+Bits and Pixels
+_______________________
+
+Total bits = pixels * bits per pixel
+less pixel and better compression =  less bytes
+
+ lorempixel.com provides URLs for random placeholder images. 
+____________________________
+Calc () for Relative sizing
+____________________________
+ 
+https://developer.mozilla.org/en-US/docs/Web/CSS/calc
+
+  max-width:100%;
+  width: calc((100%-10px)/2); donde 100% era widht and 10px las margenes. Calc permite calcular absolute and relative values.
+
+img:last-of-type selector only a margin between imagines has a margin to separate two imagines.
+
+_______________________
+Two images, 50% width with margin
+_______________________
+  
+   img {
+      margin-right: 10px;
+      max-width: 426px;
+      width: calc((100% - 10px)/2);
+    }
+    img:last-of-type {
+      margin-right: 0;
+    }
+
+_______________________
+three images
+_______________________
+  
+      body {
+      margin: 0;
+    }
+    img {
+      float: left;
+      margin-right: 10px;
+      width: calc((100% - (10px * 2))/3);/*
+      Your code goes here!
+      */
+    }
+    img:last-of-type {
+      margin-right: 0px;
+    }
+  
+_______________________
+css unit VW 
+_______________________
+
+* vw is viewport width: 1vw es 1% de el viewport heigth
+* if only image height = 100% html and body heigth are 100% too.
+* vw, vmax, vmin to heigth and width
+
+_______________________
+Raster and Vector
+_______________________
+
+Raster (dots of color) and Vector (how contructed from lines and curves and colors)
+
+Tamaño de los archivos: svg < jpg < png.  
+
+WebP otro formato con mejor compression soportado por chrome. Para logos si no se puede svg usar png. Lo usa Google+ y Facebook. Lo podria usar en app nativas con vista web. 
+
+siempre se recomienda minificar tus archivos SVG ejecutándolos a través de una herramienta como svgo.
+
+
+________________________________________
+Herramientas interesantes para revisar
+________________________________________
+
+* gifsicle  creación y optimización de imágenes GIF
+* jpegtran  optimización de imágenes JPEG
+* optipng optimización de imágenes PNG sin pérdida
+* pngquant  optimización de imágenes PNG con pérdida
+
+________________________________________
+Lista de comprobación de optimización de la imagen
+________________________________________
+
+* prioriza formatos vectoriales
+* reduce y comprime los recursos SVG (tambien asegurarse que la configuracion de servidores permita compresion gzip para recursos SVG)
+* escoge el mejor fromato de imagen de trama
+* experimenta con configuraciones de calidad optima para formatos de trama
+* elimina los metadatos de imagenes innecesarios (info camara o geografica)
+* proporciona imagenes ajustadas a escala.
+busca la optimizacion permanente ( herramientas e infraestructura automatizada)
+
+________________________________________
+Compression, Optimization And Automation
+________________________________________
+
+Before you start automating your build process with tools like ImageMagick or ImageOptim: 
+
+1. install Node.js. It also comes with a package manager, npm and give access to Grunt.
+  * Node.js was installed at /usr/local/bin/node
+  * npm was installed at /usr/local/bin/npm
+  * Make sure that /usr/local/bin is in your $PATH.
+
+2. update npm if is needed.
+3. install ImageMagick:
+
+   * http://www.imagemagick.org/script/download.php
+   * $brew install imagemagick --with-x11
+
+  GraphicsMagick (a fork of ImageMagick) >>> No lo instalé
+
+4. Grunt:
+
+  Getting started with Grunt
+
+  Grunt for People Who Think Things Like Grunt are Weird and Hard (https://24ways.org/2013/grunt-is-not-weird-and-hard/) >>>>> muy recomendado
+
+
+  Generate multi-resolution images with Grunt
+  grunt-responsive-images plugin for generating multiple images
+  grunt-respimg plugin for a responsive image workflow
+  Files used in scripting examples:
+  Udacity webcast for setting up Grunt: Front End version and Full Stack version.
+
+
+5.  HTTP Server (I need to see the Mb transfered in my page)
+  *  Really Simple HTTP Server with Python (http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python)
+      $ cd /home/somedir  >>>> directore to share
+      $ python -m SimpleHTTPServer
+
+      Now open a browser and type the following address:
+
+        http://myip:8000
+        http://127.0.0.1:8000
+
+
+convert.sh (includes instructions)
+Gruntfile.js (remove line 7, engine: 'im', on Windows)
+Imager.js: responsive image loading developed for BBC News
+Image processing tools:
+
+ImageOptim (Mac only)
+Trimage - Similar to ImageOptim (Windows, Mac, Linux)
+ImageAlpha
+
+
+
+
+PageSpeed Insights and Developer Tools
+PageSpeed Insights is no longer part of Developer Tools. It has been deprecated. The online version is still available.
+
+PageSpeed Insights example
+Grunt PageSpeed plugin
+PageSpeed Node module
+cURL examples
+PageSpeed Insights Node module
+
