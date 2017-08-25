@@ -133,25 +133,72 @@ Before you start automating your build process with tools like ImageMagick or Im
         http://myip:8000
         http://127.0.0.1:8000
 
+6. others tools: 
+  * Imager.js: responsive image loading developed for BBC News
+  * Image processing tools:
+      * ImageOptim (Mac only)
+      * Trimage - Similar to ImageOptim (Windows, Mac, Linux)
+      * ImageAlpha
 
-convert.sh (includes instructions)
-Gruntfile.js (remove line 7, engine: 'im', on Windows)
-Imager.js: responsive image loading developed for BBC News
-Image processing tools:
+________________________________________
+PageSpeed Insights
+________________________________________
 
-ImageOptim (Mac only)
-Trimage - Similar to ImageOptim (Windows, Mac, Linux)
-ImageAlpha
+    * PageSpeed Insights: https://developers.google.com/speed/pagespeed/?hl=es-ES&utm_source=PSI&utm_medium=incoming-link&utm_campaign=PSI
+
+    * Grunt PageSpeed plugin: https://www.npmjs.com/package/grunt-pagespeed 
+    Run mobile and desktop performance tests for your deployed site using Google PageSpeed Insights, uses psi and gpagespeed
+
+    * PageSpeed Node module: https://github.com/addyosmani/psi/
+    Run mobile and desktop performance tests for your deployed site using Google PageSpeed Insights V2 with tidy reporting for your build process.
+
+    * cURL examples: cURL is a software package which consists of command line tool and a library for transferring data using URL syntax. in this case you can do:
+      * curl http://www.centos.org > centos-org.html
+      * curl -v http://google.co.in
+
+
+________________________________________
+Perfomance
+________________________________________
+
+Latency
+  * High Performance Browser Networking. https://hpbn.co/primer-on-web-performance/
+  * How CSS affects load time: https://www.smashingmagazine.com/2013/04/build-fast-loading-mobile-website/
+
+Techniques
+* CSS image sprites (or responsive sprites). 
+* Sprite sheet 
+* no text in images (tip: use position absolute for text)
 
 
 
+_______________________________________
+CSS Background Images
+_______________________________________
+background size: cover or contain
+Ejemplos aqui (en examples):  https://github.com/udacity/responsive-images 
+    Div with background image
+    CSS background-size: cover
+    Body with background image
+    Body with background image and gradient
+    Body with elaborate background using only CSS
+    Using CSS background images for conditional image display
+    Using CSS background images for alternative images
+    image-set()
 
-PageSpeed Insights and Developer Tools
-PageSpeed Insights is no longer part of Developer Tools. It has been deprecated. The online version is still available.
+http://udacity.github.io/responsive-images/examples/
 
-PageSpeed Insights example
-Grunt PageSpeed plugin
-PageSpeed Node module
-cURL examples
-PageSpeed Insights Node module
+_______________________________________
+Symbol Characters and Icon fonts
+_______________________________________
 
+    Unicode character sets
+    List of Unicode characters
+
+    Zocial
+    Font Awesome
+    We Love Icon Fonts!
+    Icon fonts on CSS-Tricks
+    ARIA
+
+    
