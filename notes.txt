@@ -201,4 +201,15 @@ _______________________________________
     Icon fonts on CSS-Tricks
     ARIA
 
-    
+    <i class= "fa fa-youtube-play"></i>
+    fa{ color:pink;}
+_________________________________________
+Inlining images with SVG and data URIs
+_________________________________________
+
+* SVG and DataURI inline in html and in CSS 
+* we use this to reduce http requests
+
+* Data URIs: Method of embedding images and other files in webpages as a string of text, generally using base64 encoding. 
+  <img src="data:image?svg+xml;base64,[data]">
+

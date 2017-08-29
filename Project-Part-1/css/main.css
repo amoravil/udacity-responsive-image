@@ -12,6 +12,15 @@ I've left some boilerplate below for you.
 
 */
 
+[class*="zocial-"]:before {
+  color: black;
+  display: inline-block;
+  font-family: 'zocial', sans-serif;
+  text-shadow: 3px 3px 3px #aaa;
+  width: 2em;
+}
+
+
 body {
 	font-family: sans-serif;
 	width: 100%;
@@ -23,6 +32,7 @@ article {
 	max-width: 50em; /*= 50em x 16px where 16px is font size */
 	margin-right: auto;
     margin-left: auto; 
+    border-bottom: 1px solid #ddd;
 }
 
 h1 {
@@ -39,4 +49,20 @@ img {
 figure {
 	text-align: center;
 	font-style: italic;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+	display: inline-block;
+}
+
+footer {
+  margin: 0 auto;
+  width: 800px;
+  text-align: center;
+
 }
