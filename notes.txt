@@ -213,3 +213,76 @@ _________________________________________
 * Data URIs: Method of embedding images and other files in webpages as a string of text, generally using base64 encoding. 
   <img src="data:image?svg+xml;base64,[data]">
 
+_________________________________________
+Full responsiveness 
+_________________________________________
+
+
+* srcset:
+The srcset and sizes attributes extend the img and source elements to provide a list of available image sources and their sizes. Browsers can then use this information to pick the best image source.
+
+
+  ** The browser will download the image that best corresponds to its DPR .
+
+    <img src="image_2x.jpg" srcset="image_2x.jpg 2x, image_1x.jpg 1x" alt="a cool image">  
+
+  ** the browser to choose the most appropriate image to request, depending on viewport size and DPR
+
+    <img src="image_200.jpg" srcset="image_200.jpg 200w, image_100.jpg 100w" alt="a cool image">
+
+  ** sizes tells the browser early in the load process that the image will be displayed at some width when the mediaQuery is hit. if sizes is missing, the browser defaults sizes to 100vw, meaning that it expects the image will display at the full viewport width. it does not actually resize the image - that's what CSS does.
+
+      <img  src="images/great_pic_800.jpg"
+      sizes="(max-width: 400px) 100vw, (min-width: 401px) 50vw"
+      srcset="images/great_pic_400.jpg 400w, images/great_pic_800.jpg 800w"
+      alt="great picture">
+
+
+* picture:
+The picture element is a markup pattern that allows developers to declare multiple sources for an image. By using media queries, it gives developers control as to when and if those images are presented to the user.
+    <picture>
+      <source media="(min-width: 40em)"
+        srcset="big.jpg 1x, big-hd.jpg 2x">
+      <source 
+        srcset="small.jpg 1x, small-hd.jpg 2x">
+      <img src="fallback.jpg" alt="">
+    </picture>
+
+
+* mix imag srcset and picture
+https://dev.opera.com/articles/responsive-images/
+
+Example: Changing image sizes & art direction use case
+
+sizes dpi mime art
+
+<picture>
+  <source
+    media="(min-width: 1280px)"
+    sizes="50vw"
+    srcset="opera-fullshot-200.jpg 200w,
+        opera-fullshot-400.jpg 400w,
+        opera-fullshot-800.jpg 800w,
+        opera-fullshot-1200.jpg 1200w">
+  <img
+    src="opera-closeup-400.jpg" alt="The Oslo Opera House"
+    sizes="(min-width: 640px) 60vw, 100vw"
+    srcset="opera-closeup-200.jpg 200w,
+        opera-closeup-400.jpg 400w,
+        opera-closeup-800.jpg 800w,
+        opera-closeup-1200.jpg 1200w">
+</picture>
+
+
+_____________________________
+Otros
+______________________________
+
+* example dimension images:
+large.jpg (1024 x 768)
+medium.jpg (640 x 480)
+small.jpg (320 x 240)
+
+in chrome console 
+* $0.currentScr
+* window.devicePixelRatio 
